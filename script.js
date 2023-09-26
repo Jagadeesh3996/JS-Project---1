@@ -7,7 +7,10 @@ function calcuate(opt){                                             // function 
         output.innerHTML = "";
     }
     else if(opt == 'oddEven'){                                      // checking the input is Even or not
-        (num % 2 == 0) ? output.innerHTML = num + " is Even Number." : output.innerHTML = num + " is Odd Number.";
+        (num % 2 == 0) ? output.innerHTML = `<span>${num}</span> is Even Number.` : output.innerHTML = `<span>${num}</span> is Odd Number.`;
+    }
+    else if(opt == 'square'){
+        output.innerHTML = `The Square of <span>${num}</span> is <span>${num*num}</span> .`;
     }
     else if(num <= 0){                                               // checking the input is positive or not
         alert("Enter a Positive Number !");
@@ -28,7 +31,7 @@ function calcuate(opt){                                             // function 
                         }
                     }
                 }        
-                Prime ? output.innerHTML = num + " is Prime Number." : output.innerHTML = num + " is Composite Number." ;
+                Prime ? output.innerHTML = `<span>${num}</span> is Prime Number.` : output.innerHTML = `<span>${num}</span> is Composite Number.` ;
                 break;
         
             case 'factorial' :
@@ -36,7 +39,7 @@ function calcuate(opt){                                             // function 
                 for (var i=2; i<=num; i++){                              // Calculating factorial for input
                     fact *=i ;
                 }
-                output.innerHTML = "The Factorial of "+ num +" is "+ fact;
+                output.innerHTML = `The Factorial of <span>${num}</span> is <span>${fact}</span> .` ;
                 break;
         
             case 'fibonacci' :
@@ -45,7 +48,11 @@ function calcuate(opt){                                             // function 
                     fibo[i] = fibo[i - 1] + fibo[i - 2];
                     fibo[1] = 1;
                 }
-                output.innerHTML = "The Fibonacci Sequence of "+ num +" is "+ fibo;
+                output.innerHTML = `The Fibonacci Sequence of <span>${num}</span> is <span>${fibo}</span> .`;
+                break;
+
+            case 'sqroot' :
+                output.innerHTML = `The SquareRoot of <span>${num}</span> is <span>${Math.sqrt(num)}</span> .` ;
                 break;
         }
     }
