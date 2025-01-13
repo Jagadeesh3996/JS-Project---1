@@ -1,4 +1,4 @@
-# JS-Project---1
+# JS-Project
 
 Created this  Simple good looking webpage for finding some operations. This platform is designed using simple HTML, CSS, JS.
 
