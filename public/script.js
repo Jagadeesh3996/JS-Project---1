@@ -48,7 +48,8 @@ function calcuate(opt){                                             // function 
                     fibo[i] = fibo[i - 1] + fibo[i - 2];
                     fibo[1] = 1;
                 }
-                output.innerHTML = `The Fibonacci Sequence of <span>${num}</span> is <span>${fibo}</span> .`;
+                const result = fibo.join(", ");                
+                output.innerHTML = `The Fibonacci Sequence of <span>${num}</span> is <span>${result}</span> .`;
                 break;
 
             case 'sqroot' :
